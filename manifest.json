@@ -1,21 +1,17 @@
 {
-
   "manifest_version": 2,
   "name": "Bitok Helper",
   "version": "1.1",
-
   "description": "Directly join virtual classes from el.yazd.ac.ir/vclass",
-
   "icons": {
     "48": "icons/bitok-48.png",
     "96": "icons/bitok-96.png"
   },
-
   "content_scripts": [
     {
       "matches": ["*://*.el.yazd.ac.ir/vclass*"],
-      "js": ["bitok-helper.js"]
+      "js": ["bitok-helper.js", "./recently_used/index.js"],
+      "css": ["styles.css"]
     }
   ]
-
 }
