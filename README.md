@@ -7,3 +7,7 @@ Also the classes of the department of computer engineering are highlighted to be
 
 The original version of the add-on has been developed by [Ali Rashidi](https://github.com/codenegaar)
 
+authors:
+[Ali Rashidi](https://github.com/codenegaar)
+[Amirhossein Azimyzadeh](https://github.com/AmirhosseinAzimyzadeh)
+
