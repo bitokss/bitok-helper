@@ -1,0 +1,137 @@
+html{
+    --main-color: rgb(38, 103, 206);
+}
+tr{height: 30px;}
+
+#loadingMessageContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    z-index: 1000;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 16px 10px 20px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    font-size: 24px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.loaderAnimation {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-bottom: 4px solid #3498db;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    animation: spin 0.8s linear infinite;
+}
+
+.bitokLinkStyle {
+    transition: 0.3s;
+    font-size: 20px;
+    padding: 2px 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: white;
+    white-space: nowrap;
+    color: var(--main-color);
+}
+
+.bitokLinkStyle:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.bitokRecentCourses{
+    position: fixed;
+    padding: 10px 20px;
+    color: white;
+    background: var(--main-color);
+    border-radius: 5px;
+    top: 16px;
+    left: 16px;
+    margin: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    user-select: none;
+    border: solid 2px white;
+    font-size: 20px;
+    animation: blink 3s infinite;
+}
+.bitokRecentCourses:hover {
+    transform: scale(1.2);
+    animation: none;
+}
+
+@keyframes blink {
+    0% { transform: scale(1) }
+    50% { transform: scale(1.2) }
+    100% { transform: scale(1) }
+}
+
+.bitokModalBackground{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.8);
+    transition: 0.3s;
+}
+
+.bitokModalContainer{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 380px;
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+    z-index: 1001;
+    padding: 10px;
+}
+
+.bitokCourse{
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    transition: 0.1s;
+    padding: 10px 20px;
+    font-size: 24px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bitokCourse:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.bitokSignature{
+    font-size: 14px;
+    text-align: center;
+    margin: 10px;
+}
+
+.bitokNotFound{
+    text-align: center;
+    font-size: 26px;
+    color: var(--main-color);
+}
