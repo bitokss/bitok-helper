@@ -2,8 +2,8 @@ const TABLE_ID = 'courseTable';
 const CE_REGEX = '_2224';
 const CE_BACK_COLOR = '#4CAF50';
 const DELAY = 3000;
-const LINK_TEXT = 'برای ورود کلیک کنید';
-const LOADING_MESSAGE = 'لطفا صبر کنید ...';
+const LINK_TEXT = 'برای ورود کلیک کنید';	//Not used, due to a warning in Mozilla extension verifier
+const LOADING_MESSAGE = 'لطفا صبر کنید ...';	//Same as the variable above
 const KEEP_RECENT_COUNT = 10;
 
 let loadingMessageRef;
@@ -15,7 +15,7 @@ function showLoader() {
     const loadingCycle = document.createElement('div');
     loadingCycle.className = "loaderAnimation";
     loadingMessageRef.id = "loadingMessageContainer";
-    loadingMessageRef.innerHTML = LOADING_MESSAGE;
+    loadingMessageRef.innerHTML = 'لطفا صبر کنید ...'; //LOADING_MESSAGE;
     loadingMessageRef.style.top = '-10%';
     loadingMessageRef.appendChild(loadingCycle);
     document.body.appendChild(loadingMessageRef);
@@ -54,7 +54,7 @@ function modifier() {
         a.setAttribute("href", acLink);
         a.setAttribute("target", '_blank');
         a.className = 'bitokLinkStyle';
-        a.innerHTML = LINK_TEXT;
+        a.innerHTML = 'برای ورود کلیک کنید'; //LINK_TEXT;
 
         // update recent courses
         a.addEventListener('click', () => {
